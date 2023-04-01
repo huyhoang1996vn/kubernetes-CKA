@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: dash
+    type: front-end
+  name: dash
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dash
+      type: front-end
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: dash
+        type: front-end
+    spec:
+      containers:
+      - image: "huyhoang1996ha/my-dash:latest"
+        name: dash
+        resources: {}
+        ports:
+        - containerPort: 80
+status: {}

@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: nginx-lb
+          servicePort: 80
+  - http:
+      paths:
+      - path: /dash/*
+        backend:
+          serviceName: dash-lb
+          servicePort: 80
