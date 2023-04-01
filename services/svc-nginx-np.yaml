@@ -4,6 +4,7 @@ metadata:
   name: nginx
   labels:
     name: nginx
+    type: front-end
 spec:
   type: NodePort
   ports:
@@ -12,3 +13,6 @@ spec:
     targetPort: 80
   selector:
     app: nginx
+    type: front-end
+
+
