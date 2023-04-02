@@ -9,7 +9,7 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
-    nodePort: 30080
+    nodePort: 30082
     targetPort: 80
   selector:
     app: dash
