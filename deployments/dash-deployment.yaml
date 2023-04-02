@@ -25,5 +25,5 @@ spec:
         name: dash
         resources: {}
         ports:
-        - containerPort: 80
+        - containerPort: 8050
 status: {}

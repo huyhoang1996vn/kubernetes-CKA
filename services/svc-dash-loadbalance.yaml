@@ -10,7 +10,7 @@ spec:
   ports:
   - port: 80
     nodePort: 30082
-    targetPort: 80
+    targetPort: 8050
   selector:
     app: dash
     type: front-end
