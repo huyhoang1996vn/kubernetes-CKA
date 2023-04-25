@@ -1,17 +1,24 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-ingress
+  name: name-virtual-host-ingress
 spec:
   rules:
   - http:
       paths:
-      - backend:
-          serviceName: nginx-lb
-          servicePort: 80
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: nginx-lb
+            port:
+              number: 80
   - http:
       paths:
-      - path: /dash/*
+      - pathType: Prefix
+        path: "/dash"
         backend:
-          serviceName: dash-lb
-          servicePort: 80
+          service:
+            name: dash-lb
+            port:
+              number: 80

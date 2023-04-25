@@ -36,6 +36,11 @@ kubectl apply -f services/svc-nginx-np.yaml
 kubectl apply -f services/svc-nginxloadbalance.yaml
 
 
+current server
+kubectl apply -f services/svc-nginxloadbalance.yaml
+kubectl apply -f deployments/dash-deployment.yaml
+kubectl apply -f services/svc-dash-loadbalance.yaml
+kubectl apply -f ingress/dash-nginx.yaml
 
 
 

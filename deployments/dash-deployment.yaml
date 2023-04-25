@@ -21,9 +21,9 @@ spec:
         type: front-end
     spec:
       containers:
-      - image: "huyhoang1996ha/my-dash:latest"
+      - image: "huyhoang1996ha/my-dash:0.0.5"
         name: dash
         resources: {}
         ports:
-        - containerPort: 80
+        - containerPort: 8050
 status: {}
