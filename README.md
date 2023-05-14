@@ -44,3 +44,18 @@ kubectl apply -f ingress/dash-nginx.yaml
 
 
 
+#Update Kubernetes version
+
+apt-cache madison kubeadm
+
+apt-get upgrade -y kubeadm=1.26.0-00
+
+kubeadm upgrade apply v1.26.0 --ignore-preflight-errors all
+
+apt install kubelet=1.26.0-00
+
+node
+https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
+apt-mark unhold kubelet kubectl && \
+apt-get update && apt-get install -y kubelet=1.26.0-00 kubectl=1.26.0-00 && \
+apt-mark hold kubelet kubectl
